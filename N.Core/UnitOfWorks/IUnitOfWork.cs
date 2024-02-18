@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace N.Core.UnitOfWorks;
 
 public interface IUnitOfWork
-{
+{ 
     Task CommitAsync();
     void Commit();
 }
