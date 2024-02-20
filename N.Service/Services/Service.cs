@@ -49,13 +49,14 @@ public class Service<T> : IService<T> where T : class
 
     public async Task<T> GetByIdAsync(int id)
     {
-        var hasProduct = await _repository.GetByIdAsync(id);
+        return await _repository.GetByIdAsync(id);
+        //var hasProduct = await _repository.GetByIdAsync(id);
 
-        if (hasProduct == null)
-        {
-            throw new NotFoundExcepiton($"{typeof(T).Name}({id}) not found");
-        }
-        return hasProduct;
+        //if (hasProduct == null)
+        //{
+        //    throw new NotFoundExcepiton($"{typeof(T).Name}({id}) not found");
+        //}
+        //return hasProduct;
     }
 
     public async Task RemoveAsync(T entity)
