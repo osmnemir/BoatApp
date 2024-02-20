@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace N.Core;
+namespace N.Core.DTOs;
 
-public class ProductFeature
+public class ProductFeatureDto
 {
+
     public int Id { get; set; }
     public string Color { get; set; }
     public int Height { get; set; }
     public int Width { get; set; }
 
     public int ProductId { get; set; }
-    public Product Product { get; set; }
 }

@@ -65,8 +65,5 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
         _dbSet.RemoveRange(entities);
     }
 
-    public IQueryable<T> GetAll(Expression<Func<T, bool>> expression)
-    {
-        return _dbSet.AsNoTracking().AsQueryable();
-    }
+    
 }

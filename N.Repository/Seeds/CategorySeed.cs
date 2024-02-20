@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using N.Core;
+using N.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ namespace N.Repository.Seeds
             builder.HasData(
                 new Category { Id = 1, Name = "Dıştan Takma Motorlar" },
                 new Category { Id = 2, Name = "Polyester Tekneler" },
-                new Category { Id = 3, Name = "Jet Skı" });
+                new Category { Id = 3, Name = "Jet Ski" });
         }
     }
 }
