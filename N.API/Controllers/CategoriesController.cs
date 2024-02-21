@@ -1,10 +1,13 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using N.API.Filters;
 using N.Core.DTOs;
 using N.Core.Services;
 
 namespace N.API.Controllers;
+
+[ValidateFilterAttribute]
 public class CategoriesController : CustomBaseController
 {
     private readonly ICategoryService _categoryService;
