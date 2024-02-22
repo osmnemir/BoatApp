@@ -39,7 +39,7 @@ public class ProductsController : CustomBaseController
     }
 
 
-    //[ServiceFilter(typeof(NotFoundFilter<Product>))]
+    [ServiceFilter(typeof(NotFoundFilter<Product>))]
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(int id)
     {
