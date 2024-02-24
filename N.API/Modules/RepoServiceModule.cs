@@ -8,6 +8,7 @@ using N.Repository;
 using N.Service.Mapping;
 using N.Service.Services;
 using System.Reflection;
+using N.Caching;
 
 namespace N.API.Modules;
 public class RepoServiceModule : Autofac.Module
@@ -34,7 +35,7 @@ public class RepoServiceModule : Autofac.Module
         builder.RegisterAssemblyTypes(apiAssembly, repoAssembly, serviceAssembly)
             .Where(x => x.Name.EndsWith("Service")).AsImplementedInterfaces().InstancePerLifetimeScope();
 
-
+        builder.RegisterType<ProductServiceWithCaching>().As<IProductService>();
 
     }
 }
